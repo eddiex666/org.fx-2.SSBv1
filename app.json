@@ -1,0 +1,170 @@
+{
+  "id": "org.fx-2.SSBv1",
+  "name": {
+    "en": "SSBv1"
+  },
+  "description": {
+    "en": "Connect your Homey with Samsung soundbar"
+  },
+  "version": "0.1.0",
+  "brandColor": "#E3B30B",
+  "homeyCommunityTopicId": 9333,
+  "sdk": 2,
+  "compatibility": ">=1.5.13",
+  "category": [
+    "video"
+  ],
+  "tags": {
+    "en": [
+      "SSBv1"
+    ],
+    "nl": [
+      "SSBv1"
+    ],
+    "de": [
+      "SSBv1"
+    ]
+  },
+  "author": {
+    "name": "EddieX666",
+    "email": "eddiex@fx-2.org",
+    "website": "http://www.vgpc.no"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "eddiex666"
+      }
+    }
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "bugs": {
+    "url": "https://github.com/eddiex666/org.fx-2.SSBv1/issues"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "powerstate_deepStandy",
+        "title": {
+          "en": "deep standby mode",
+          "de": "Tiefschlaf modus"
+        },
+        "hint": {
+          "en": "No Software Control will be possible, after executing of this Command!",
+          "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
+        }
+      },
+      {
+        "id": "powerstate_restart_e2",
+        "title": {
+          "en": "reboot SSBv1 software",
+          "de": "Neustart SSBv1 Software"
+        }
+      },
+      {
+        "id": "powerstate_rebootBox",
+        "title": {
+          "en": "reboot receiver",
+          "de": "Neustart Receiver"
+        }
+      },
+      {
+        "id": "command_send",
+        "title": {
+          "en": "send command as ID",
+          "de": "Kontrollbefehl als ID senden"
+        },
+        "hint": {
+          "en": "For supported Command ID's please look at http://SSBv1.fx-2.org",
+          "de": "Für unterstützte ID's bitte unter http://SSBv1.fx-2.org schauen"
+        },
+        "args": [
+          {
+            "name": "command",
+            "type": "number",
+            "step": 1,
+            "placeholder": {
+              "en": "command ID",
+              "de": "Befehls ID"
+            }
+          }
+        ]
+      },
+      {
+        "id": "message_send",
+        "title": {
+          "en": "send message",
+          "de": "Nachricht versenden"
+        },
+        "hint": {
+          "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO question \n1 = Info \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
+          "de": "Nachrichten müssen im folgenden Format eingegeben werden: \n\nTyp|Anzeigezeit|Text \n\nTyp: \n0 = Ja / Nein Frage \n1 = Information \n2 = Nachricht \n 3 = Warnung \nAnzeigezeit = Sekunden oder 0 für dauerhaft \nMessage = Nachrichtentext"
+        },
+        "args": [
+          {
+            "name": "msg_text_full",
+            "type": "text",
+            "placeholder": {
+              "en": "Message Text",
+              "de": "Nachrichten Text"
+            }
+          }
+        ]
+      },
+      {
+        "id": "powerstate_off",
+        "title": {
+          "en": "standby mode",
+          "de": "standby einleiten"
+        }
+      },
+      {
+        "id": "powerstate_on",
+        "title": {
+          "en": "standby wake",
+          "de": "standby verlassen"
+        }
+      },
+      {
+        "id": "vol_mute",
+        "title": {
+          "en": "Volume mute",
+          "de": "Lautstärke stumm"
+        }
+      },
+      {
+        "id": "vol_set",
+        "title": {
+          "en": "set Volume to (0-100)",
+          "de": "Lautstärke festlegen (0-100)"
+        },
+        "args": [
+          {
+            "name": "volume",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "placeholder": {
+              "en": "Volume set (0% - 100%)",
+              "de": "Lautstärke festlegen (0% - 100%)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "vol_unmute",
+        "title": {
+          "en": "Volume unmute",
+          "de": "Lautstärke stumm aufheben"
+        }
+      }
+    ]
+  }
+}
