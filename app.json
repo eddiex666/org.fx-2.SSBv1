@@ -38,8 +38,8 @@
     }
   },
   "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "large": "/assets/images/samsungSoundbar.jpg",
+    "small": "/assets/images/samsungSoundbar.jpg"
   },
   "bugs": {
     "url": "https://github.com/eddiex666/org.fx-2.SSBv1/issues"
